@@ -13,7 +13,7 @@ class WencaiCookie:
         with open(os.path.dirname(os.path.dirname(__file__)) + '/js/hexin.js', 'r') as f:
             jscontent = f.read()
         context = execjs.compile(jscontent)
-        return context.call("v")
+        return context.call("getHexinV")
 
     def setHexinByJson(self, source, cookies=None):
         if cookies is None: cookies = dict()
